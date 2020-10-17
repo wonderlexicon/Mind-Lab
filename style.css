@@ -1,56 +1,111 @@
 
-body
-.project__heading
-.project_sub-heading1
-.project__entry
-.title
-fontsize 3.17em 
-p {font-size 2rem;)}
-color: green;
 
 
-.project__heading1 {
-  
-  border-block-start-color: rgb(197, 140, 16);
-  flex-flow: row wrap;
-  color: red;
-  margin: px 0;
-  align-content: space-around;
+
+/* element :hover; */
+/* 
+ {
+  .box {
+    margin-top: -40px;
+    margin-right: 4em;
+    margin-bottom: 40px;
+    margin-left: 4em;
+  } */
+  /* padding: 30px;
+  animation: mymove 120s infinite; */
+  /* font: solidcolor
+  align-items: center-position;
+  } */
+
+  /* head
+  .paragraph {
+    scroll-padding-left: 30pt;
+    margin-left: 4em;
+    margin-right: 4em;
+
+  } */
+/* .box {
+  align-content: center;
+} */
+  /* .text {
+    align-content: center;
+    padding: 20px;
+  } */
+
+
+  /* intro pp */
+.intro {
+  align-content: center;
+  color: navy;
 }
 
+legend {
+  margin-top: 2em;
+  padding: 1.2em;
+}
+
+/* Welcome */
+
 h1 {
-  color: rgb(128, 66, 16);
+  color: rgb(151, 55, 92);
+  text-shadow: tomato;
+text-shadow-offset: wrap
+  /* background-color: ; */
+  padding: .2em;;
+  margin: center;
+  margin-left: 1em;
+  margin-right: 1.em;                             
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 /* .project_sub-heading: {
   position: center
-  } */
+  } */                                    
   
-h3 {text-align: center
-   position:  ;
-  
-}
-  id  {
-   yesClick: red;
-
-}
-
-
-h2 {
-  color: darkred
-}
-
- 
 h3 {
-  color: rgb(223, 130, 24);
+  margin: 1rem;                                                                                                                                                 text-align: match parent;
+
+}
+  id {
+   yesClick: red;
+   padding-block: 1em;
+  background-size: 1em;
 }
 
-/* Step 1-4 prompts */
+/* Step 1-4 identifiers, Review Question and FInal Prompt */
+h2 {
+  color: rgb(206, 53, 91);
+  text-shadow: firebrick;
+  border-color: rgb(218, 214, 22);
+  /* background: rgb(16, 216, 206); */
+  /* margin-right: 3em; */
+margin-left: 1.5em; 
+  margin-top: 1em
+  /* margin-bottom: 5em; */
+  padding: .1em;
+
+}
+/* 
+Title, Closing pp,  */
+h3 {
+  color: rgb(33, 87, 131);
+}
+
+/* Intro and Step 1-4 prompts */
+
 h4 {
-  color: rgb(70, 104, 7);
+  color: rgb(navy);
+  padding: .2em;
+  margin-left: 1.5em;
+  margin-right: 3em;
 }
 
+/* challenge */
 h5 {
-  color: orangered;
+  color: teal;
+  border-style: outset;
+  background-color: yellow;
+ border-color: rgb(33, 87, 131);
 }
 
 div {
@@ -59,23 +114,62 @@ div {
   align-items: center;
 }
 
+div.project__entry{
+  color: rgb(teal)
+  margin: 0px 2px
+  font: 30px;
+
+}
+
+fieldset 
+  legend {
+    padding: 3px 2px;
+    color: teal; 
+    font-size: 1.2em;
+    border-width: 5px;
+  }
+  input {
+  margin: 6px;
+   outline-style: inset;
+   border-color: turquoise;
+   border-style: solid;
+   color: navy;
+  }
+
+
+
+p#userThought
+{
+  color: rgb(235, 29, 29);
+  font-weight: extrabold;
+  font-size: 30px;
+}
+
+p#userFeel
+{
+  color: rgb(235, 29, 29);
+  font-weight: extrabold;
+  font-size: 30px;
+}
+/* not working */
 
 p#userActions 
 {
-  color: red;
-}
-p#userThoughts
-{
-  color: red;
-}
-p#userFeelings
-{
-  color: red;
-}
+  color: rgb(235, 29, 29);
+  font-weight: extrabold;
+  font-size: 30px; 
+
+} 
+
 p#userResults
 {
   color: red;
+  font-weight: extrabold;
+  font-size: 30px;
+
 }
+
+/* not working */
 
 .project__entry {
   display: flex;
@@ -89,27 +183,30 @@ body {
     margin-bottom: 40px;
     margin-left: 4em;
   }
-     
- /* display: inline-block; */
-  padding: 25px;
+  padding: 30px;
   animation: mymove 120s infinite;
-  /* source https://www.w3schools.com/cssref/tryit.asp?filename=trycss_animatable */
-
   font-family: fantasy;
   align-items: center-position;
   }
 
+ /* display: inline-block; */
+ 
+  /* source https://www.w3schools.com/cssref/tryit.asp?filename=trycss_animatable */
+
+  
+
+
   @keyframes mymove {
     from {
-      background-color: rgb(250, 237, 51);
+      background-color: rgb(81, 241, 246);
     }
 
     to {
-      background-color:rgba(161, 155, 67, 0.849);
+      background-color:rgba(21, 240, 192, 0.849);
     } 
 
    
-    display: inline-block; {
+ /* display: inline-block; {
     font-size: 2.17em;
     margin-block-start: 1.5em;
     margin-block-end: 1.5em;
@@ -118,63 +215,67 @@ body {
     font-weight: bold;
     align-items: center;
       text-align-last: ;
-  }
+  }  */
 
-   border-block-color: rgb(37, 333, 203); 
+
+.review {
+align-items: center;
 }
+   
+/* .border-block-color {
+font: 1em sans-serif;
+color: blueviolet;
+display: ellipse;
+} */
 
 
 .project_sub-heading {
   color: red;
   display:hover 
+  font-weight: 20px
 }
 
-.text {
+/* .text {
   color: red
-}
+} */
 
-italic {
+.italic {
   font-style: italic;
 }
 
-.paragraph {
+.p1 {
+  padding: 20px;
   color: blueviolet;
+}
+.pmargin {
+  margin: 3em;
+  padding: 3em;
+  border: 2em;
 }
 
  }
 .project__container {
  flex-direction: column; 
+ padding-left: 10px;
   align-content: space-around;
   color: blue;
 } */
 
 .title {
-  color: rgb(100, 160, 210);
+  color: rgb(83, 126, 161);
 }
 /* 
 THOUGHTS  */
 
-fieldset { 
-  color: rgb(189, 99, 38);
-  font-size: 1.8em;
-  textcolor: red;
-  
+/* button */
 
-.project__entry {
-  display: flex;
-  flex-flow: row wrap;
-  color: rgb(228, 31, 31);
+.BackToTop {
+  scale: 1.5em;
+  padding: 1.5em;
+  font-size: 16px;
+  background-color: red;
+  text-color: blue;
 }
-
-feDropShadow {
-  color-interpolation-filters: red;
-
-
-button {
-  color: rgb(29, 82, 160);
-}
-.button-text {
-  color: rgb(20, 87, 232);
 
 p.one {
     border: 4px;
@@ -220,7 +321,3 @@ p.two {
   border-color: rgb(202, 44, 155);
 } 
 
-p.three {
-  border-style: dotted;
-  border-color: redorange;
-} 
