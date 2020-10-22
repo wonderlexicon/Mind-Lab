@@ -11,7 +11,12 @@ app.get('/getThoughts', (req,res)=> {
         res.json({data:docs})
     })
 })
-
+app.post('/postThoughts', (req,res)=> {
+    // thoughtsDb.find({}, (err, docs) => {
+    //     res.json({data:docs})
+    // })
+    console.log('posting');
+})
 
 app.get('/', (req,res)=> {
     res.sendFile(path.join(__dirname + '/index.html'));

@@ -131,7 +131,15 @@ function replaceUserThoughtText() {
 
 function onThoughtButtonClicked() {
   replaceUserThoughtText();
-
+fetch('/postThoughts', {
+  'method': "POST",
+  'headers': {
+    'Content-type': 'application/json'
+  },
+  "body": {}
+})
+.then(response => response.json())
+.then(data=>{console.log(data)} )
 } 
 function writeToThoughtsDb(){
 //TO BE CONTINUED WRITING TO NEDB//
