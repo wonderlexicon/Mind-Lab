@@ -34,6 +34,20 @@
 
 
   /* intro pp */
+ p.one {
+    font-size: 1.6rem;
+}
+
+#head {
+    font-size: 1.2rem;
+}
+
+body {
+  
+  background-color: rgb(81, 241, 246);
+    font-size: 1.4rem;
+}
+
 .intro {
   align-content: center;
   color: navy;
@@ -48,10 +62,10 @@ legend {
 
 h1 {
   color: rgb(151, 55, 92);
-  text-shadow: tomato;
-text-shadow-offset: wrap
+  text-shadow: #ff6347;
+/* text-shadow: wrap; */
   /* background-color: ; */
-  padding: .2em;;
+  padding: .2em;
   margin: center;
   margin-left: 1em;
   margin-right: 1.em;                             
@@ -67,7 +81,7 @@ h3 {
 
 }
   id {
-   yesClick: red;
+   /* yesClick: red; */
    padding-block: 1em;
   background-size: 1em;
 }
@@ -80,7 +94,7 @@ h2 {
   /* background: rgb(16, 216, 206); */
   /* margin-right: 3em; */
 margin-left: 1.5em; 
-  margin-top: 1em
+  margin-top: 1em;
   /* margin-bottom: 5em; */
   padding: .1em;
 
@@ -115,8 +129,8 @@ div {
 }
 
 div.project__entry{
-  color: rgb(teal)
-  margin: 0px 2px
+  color: rgb(teal);
+  margin: 0px 2px;
   font: 30px;
 
 }
@@ -176,18 +190,19 @@ p#userResults
   flex-flow: row wrap;
   color: rgb(228, 31, 31);
 }
-body {
+
+/* body { */
   .box {
     margin-top: -40px;
     margin-right: 4em;
     margin-bottom: 40px;
     margin-left: 4em;
   }
-  padding: 30px;
+  /* padding: 30px;
   animation: mymove 120s infinite;
   font-family: fantasy;
   align-items: center-position;
-  }
+  } */
 
  /* display: inline-block; */
  
@@ -204,7 +219,7 @@ body {
     to {
       background-color:rgba(21, 240, 192, 0.849);
     } 
-
+  }
    
  /* display: inline-block; {
     font-size: 2.17em;
@@ -231,8 +246,8 @@ display: ellipse;
 
 .project_sub-heading {
   color: red;
-  display:hover 
-  font-weight: 20px
+  display:hover; 
+  font-weight: 20px;
 }
 
 /* .text {
@@ -253,7 +268,7 @@ display: ellipse;
   border: 2em;
 }
 
- }
+ 
 .project__container {
  flex-direction: column; 
  padding-left: 10px;
@@ -274,7 +289,7 @@ THOUGHTS  */
   padding: 1.5em;
   font-size: 16px;
   background-color: red;
-  text-color: blue;
+  /* text-color: blue; */
 }
 
 p.one {
@@ -287,9 +302,9 @@ div  {
   color: rgb(22, 77, 198);
 }
 
-div {
-  text: blue;
-}
+/* div {
+   text: blue;
+} */
 
 canvas{
   display: block;

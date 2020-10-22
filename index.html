@@ -6,19 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myMindLab</title>
     <link href="style.css" rel="stylesheet" />
-    <style>
-       <div id = "p.one"> {
-            font-size: 1.6rem;
-        }
-       
-        <div id= "head"> {
-            font-size: 1.2rem;
-        }
-
-        body {
-            font-size: 1.4rem;
-        }
-    </style>
+    
 
 
 <body>
@@ -113,7 +101,7 @@ This will be the object of your inquiry. A circumstance can be anything that exi
                    <p>Customize my Cerebral Chit-chat:</p>
                     <input id="thought-input"> </input>
 
-                    <button onclick="replaceUserThoughtText()" id="thought-button">
+                    <button onclick="onThoughtButtonClicked()" id="thought-button">
                         Submit!</button>
                 
                     <!-- FILL IN PHRASE FIELD -->
@@ -205,7 +193,14 @@ This will be the object of your inquiry. A circumstance can be anything that exi
 
         <h2>Step 3:</h2> <p>
 
-     Pause and reflect. When you feel (INPUT USER FEELING) how do you <i>behave
+     Pause and reflect. When you feel<script>
+        function replaceUserFeelText() {
+           document.getElementById("userFeel").innerHTML = document.getElementById(
+              "feeling-input")
+                .value;
+               }
+        </script>
+               <p id="userFeel"></p>how do you <i>behave
      </i>?* </p>
                 <p>
                     Examples:
@@ -244,7 +239,7 @@ document.getElementById("userActions").innerHTML = document.getElementById(
      <h2 class="project__sub-heading">
                     Step 4:
      </h2>
-   What effect do you create by engaging in the behaviors you've identified?<p>Examples: Have more energy. Get into another argument with my partner. Default on my credit card payment. My daughter thinks I don't care enough to give her my full attention. My dad stop's reaching out. I'm up all night with heartburn. I keep cool during a hardball negotiation. 
+   What effect do you create by engaging in the behaviors you've identified?<p>Examples: Have more energy. Get into another argument with my partner. Default on my credit card payment. My daughter thinks I don't care enough to give her my full attention. My dad stops reaching out. I'm up all night with heartburn. I keep cool during a hardball negotiation. 
        
    </p>
      <fieldset>

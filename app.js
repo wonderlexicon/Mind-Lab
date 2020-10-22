@@ -1,41 +1,41 @@
-//  * @name Slider
-//  * @description Move the sliders to control the R, G, B values of the background.
-//  */
+// //  * @name Slider
+// //  * @description Move the sliders to control the R, G, B values of the background.
+// //  */
 
 
-function setup() {
-  // create canvas
-  createCanvas(800, 160);
-  textSize(15);
-  noStroke();
+// function setup() {
+//   // create canvas
+//   createCanvas(800, 160);
+//   textSize(15);
+//   noStroke();
 
-  // create sliders
-  rSlider = createSlider(0, 255, 100);
-  rSlider.position(300, 4250);
-  gSlider = createSlider(0, 255, 0);
-  gSlider.position(300, 4300);
-  bSlider = createSlider(0, 255, 255);
-  bSlider.position(300, 4350);
-}
+//   // create sliders
+//   rSlider = createSlider(0, 255, 100);
+//   rSlider.position(300, 4250);
+//   gSlider = createSlider(0, 255, 0);
+//   gSlider.position(300, 4300);
+//   bSlider = createSlider(0, 255, 255);
+//   bSlider.position(300, 4350);
+// }
 
-function draw() {
-  const r = rSlider.value();
-  const g = gSlider.value();
-  const b = bSlider.value();
-  background(r, g, b);
-  text('THINK', rSlider.x * 2 + rSlider.width, 35);
-  text('FEEL', gSlider.x * 2 + gSlider.width, 65);
-  text('ACT', bSlider.x * 2 + bSlider.width, 95);
-}
+// function draw() {
+//   const r = rSlider.value();
+//   const g = gSlider.value();
+//   const b = bSlider.value();
+//   background(r, g, b);
+//   text('THINK', rSlider.x * 2 + rSlider.width, 35);
+//   text('FEEL', gSlider.x * 2 + gSlider.width, 65);
+//   text('ACT', bSlider.x * 2 + bSlider.width, 95);
+// }
 
-let sliderPos = ("rSlider.position", "gSlider.position", "bSlider.position");
-// let rSlider.position, gSlider.position, bSlider.position = sliderPos;
+// let sliderPos = ("rSlider.position", "gSlider.position", "bSlider.position");
+// // let rSlider.position, gSlider.position, bSlider.position = sliderPos;
 
-// const myCanvas = createCanvas
-// const mySliderPos = sliderPos
-//Set the parent of the canvas to an HTML element by it's ID value  - from Craig's response on-->
-// myCanvas.parent("canvas-container");
-// mySliderPos.parent("sliders-container");
+// // const myCanvas = createCanvas
+// // const mySliderPos = sliderPos
+// //Set the parent of the canvas to an HTML element by it's ID value  - from Craig's response on-->
+// // myCanvas.parent("canvas-container");
+// // mySliderPos.parent("sliders-container");
 
 const circumstances = [
   "I see the headlines in the newspaper",
@@ -167,6 +167,14 @@ function replaceUserThoughtText() {
     .value;
 }
 
+function onThoughtButtonClicked() {
+  replaceUserThoughtText();
+
+} 
+function writeToThoughtsDb(){
+//TO BE CONTINUED WRITING TO NEDB//
+}
+//                 
 function replaceUserThoughtWithDropdown() {
   console.log('dropdown')
   let thoughtList = document.getElementById(

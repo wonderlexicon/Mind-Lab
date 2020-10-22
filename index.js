@@ -1,6 +1,16 @@
 let express = require("express");
 let app = express();
 let path = require ("path");
+let nedb = require ("nedb");
+
+let thoughtsDb =  new nedb("thoughts.db");
+thoughtsDb.loadDatabase();
+
+app.get('/getThoughts', (req,res)=> {
+    thoughtsDb.find({}, (err, docs) => {
+        res.json({data:docs})
+    })
+})
 
 
 app.get('/', (req,res)=> {
