@@ -16,6 +16,19 @@ app.post('/postThoughts', (req,res)=> {
     //     res.json({data:docs})
     // })
     console.log('posting');
+    let newThought = {
+        date: Date(), 
+        thought: req.thought
+    }
+    db.insert(newThought, (err, newDocs)=>{
+        if (err){
+            res.json({task: "failed"});
+
+        } else{
+            res.json({task: "success!!!"}); 
+        }
+    }
+    )
 })
 
 app.get('/', (req,res)=> {

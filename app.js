@@ -1,53 +1,51 @@
-
 const circumstances = [
   "I see the headlines in the newspaper",
   "my alarm goes off in the morning",
   "I have a birthday",
-  "it's raining"
+  "it's raining",
 ];
 //how do i make a new sentence for each circumstance show up w a random emotion?""
-// I feel put in json options - based on the mood the p5 changes color 
-window.addEventListener('load', function () {
+// I feel put in json options - based on the mood the p5 changes color
+window.addEventListener("load", function () {
+  console.log("page is loaded");
 
-  console.log('page is loaded');
-
-  //Load the json data file 
+  //Load the json data file
   let myEmotionsSet;
-  fetch('moods.json')
-    .then(response => response.json())
-    .then(data => {
+  fetch("moods.json")
+    .then((response) => response.json())
+    .then((data) => {
       console.log(data);
       //Do something with 'data'
       //  document.getElementById("myDiv").innerHTML=data.emotions;
       shuffle(data.emotions);
       myEmotionsSet = data.emotions;
-      document.getElementById("random-feeling-input").value = data.emotions.slice(0, 1);
-    })
+      document.getElementById(
+        "random-feeling-input"
+      ).value = data.emotions.slice(0, 1);
+    });
 
   function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
   }
   // source https://javascript.info/task/shuffle
 
-
-  let randomButton = document.getElementById("random-button")
+  let randomButton = document.getElementById("random-button");
   console.log("button");
-  randomButton.addEventListener('click', function (e) {
+  randomButton.addEventListener("click", function (e) {
     console.log("clickedRandom");
     shuffle(myEmotionsSet);
-    document.getElementById("random-feeling-input").value = myEmotionsSet.slice(0, 1);
-
-
+    document.getElementById("random-feeling-input").value = myEmotionsSet.slice(
+      0,
+      1
+    );
   });
-
-})
+});
 
 function BackToTop() {
   console.log("i clicked back to top");
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 
 function yesFunction() {
   document.getElementById("yesClick").innerHTML =
@@ -72,11 +70,9 @@ function noFunction() {
   // }
 }
 
-
-
 //    if (yesNum > 2) {
 //     yesNum = 0;
-//  } 
+//  }
 // let yesAnswers = ["great", "super", "amazing"];
 // let yesNum = 0;
 
@@ -96,8 +92,8 @@ function noFunction() {
 
 function replaceUserResultsText() {
   document.getElementById("userResults").innerHTML = document.getElementById(
-      "results-input")
-    .value;
+    "results-input"
+  ).value;
 }
 
 function onResultButtonClicked() {
@@ -109,8 +105,6 @@ function revealReviewSection() {
   if (allSectionsFilled()) {
     document.getElementById("the-big-picture").removeAttribute("hidden");
   }
-
-
 }
 
 function allSectionsFilled() {
@@ -125,38 +119,45 @@ function allSectionsFilled() {
 // THOUGHT
 function replaceUserThoughtText() {
   document.getElementById("userThought").innerHTML = document.getElementById(
-      "thought-input")
-    .value;
+    "thought-input"
+  ).value;
 }
 
 function onThoughtButtonClicked() {
   replaceUserThoughtText();
-fetch('/postThoughts', {
-  'method': "POST",
-  'headers': {
-    'Content-type': 'application/json'
-  },
-  "body": {}
-})
-.then(response => response.json())
-.then(data=>{console.log(data)} )
-} 
-function writeToThoughtsDb(){
-//TO BE CONTINUED WRITING TO NEDB//
+  writeToThoughtsDb();
 }
-//                 
-function replaceUserThoughtWithDropdown() {
-  console.log('dropdown')
-  let thoughtList = document.getElementById(
-    "thought-list");
-  document.getElementById("userThought").innerHTML = (
-    thoughtList.options[thoughtList.selectedIndex].text);
 
+function writeToThoughtsDb() {
+  let body = {
+    thought: document.getElementById("thought-input").value,
+  }
+
+let jsonData = JSON.stringify(body);
+  fetch("/postThoughts", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body:jsonData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+  //TO BE CONTINUED WRITING TO NEDB//
+}
+//
+function replaceUserThoughtWithDropdown() {
+  console.log("dropdown");
+  let thoughtList = document.getElementById("thought-list");
+  document.getElementById("userThought").innerHTML =
+    thoughtList.options[thoughtList.selectedIndex].text;
 }
 
 // FEEL
 function showRandomContainerIfDropdownSelected() {
-  console.log("showRandomFunction")
+  console.log("showRandomFunction");
   if (document.getElementById("feelingsList").value === "Random") {
     document.getElementById("random-container").removeAttribute("hidden");
   } else {
@@ -165,14 +166,12 @@ function showRandomContainerIfDropdownSelected() {
 }
 
 function onFeelingsDropdownChanged() {
-  let feelList = document.getElementById(
-    "feelingsList");
+  let feelList = document.getElementById("feelingsList");
   // if (feelList.value == "Random"){
-    showRandomContainerIfDropdownSelected();
-  // } 
-  if (feelList.value !== "Random"){
-     document.getElementById("userFeel").innerHTML =
-     (
-      feelList.options[feelList.selectedIndex].text);
+  showRandomContainerIfDropdownSelected();
+  // }
+  if (feelList.value !== "Random") {
+    document.getElementById("userFeel").innerHTML =
+      feelList.options[feelList.selectedIndex].text;
   }
 }
