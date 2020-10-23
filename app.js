@@ -24,6 +24,8 @@ window.addEventListener("load", function () {
       ).value = data.emotions.slice(0, 1);
     });
 
+
+
   function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
   }
@@ -38,8 +40,18 @@ window.addEventListener("load", function () {
       0,
       1
     );
+    replaceAllUserFeelTextRandom();
   });
 });
+
+function replaceAllUserFeelTextRandom() {
+  let feelAnswers= document.getElementsByClassName("feel-answer")
+  for (feelAnswer of feelAnswers){
+    feelAnswer.innerHTML
+    =  document.getElementById("random-feeling-input").value;
+  }
+  
+}
 
 function BackToTop() {
   console.log("i clicked back to top");
