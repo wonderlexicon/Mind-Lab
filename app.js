@@ -172,6 +172,17 @@ function replaceUserThoughtWithDropdown() {
     thoughtList.options[thoughtList.selectedIndex].text;
 }
 
+function replaceAllUserThoughtTextDropdown() {
+  let thoughtList = document.getElementById("thoughtList");
+  let thoughtAnswers= document.getElementsByClassName("thought-answer")
+  for (thoughtAnswer of thoughtAnswers){
+    thoughtAnswer.innerHTML =
+    thoughtList.options[thoughtList.selectedIndex].text;
+  }
+}
+
+
+
 // FEEL
 function showRandomContainerIfDropdownSelected() {
   console.log("showRandomFunction");
