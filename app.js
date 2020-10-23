@@ -97,8 +97,9 @@ function replaceUserResultsText() {
 }
 
 function onResultButtonClicked() {
-  revealReviewSection();
   replaceUserResultsText();
+  revealReviewSection();
+
 }
 
 function revealReviewSection() {
@@ -108,6 +109,10 @@ function revealReviewSection() {
 }
 
 function allSectionsFilled() {
+  console.log(document.getElementById("userResults").innerHTML)
+  console.log(document.getElementById("userActions").innerHTML)
+  console.log(document.getElementById("userFeel").innerHTML)
+  console.log(document.getElementById("userThought").innerHTML)
   return (
     document.getElementById("userResults").innerHTML !== "" &&
     document.getElementById("userActions").innerHTML !== "" &&
@@ -131,15 +136,15 @@ function onThoughtButtonClicked() {
 function writeToThoughtsDb() {
   let body = {
     thought: document.getElementById("thought-input").value,
-  }
+  };
 
-let jsonData = JSON.stringify(body);
+  let jsonData = JSON.stringify(body);
   fetch("/postThoughts", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
     },
-    body:jsonData,
+    body: jsonData,
   })
     .then((response) => response.json())
     .then((data) => {
@@ -171,7 +176,29 @@ function onFeelingsDropdownChanged() {
   showRandomContainerIfDropdownSelected();
   // }
   if (feelList.value !== "Random") {
-    document.getElementById("userFeel").innerHTML =
-      feelList.options[feelList.selectedIndex].text;
+    replaceAllUserFeelTextDropdown();
   }
+}
+
+
+
+function replaceAllUserFeelTextDropdown() {
+  let feelList = document.getElementById("feelingsList");
+  let feelAnswers= document.getElementsByClassName("feel-answer")
+  for (feelAnswer of feelAnswers){
+    feelAnswer.innerHTML =
+    feelList.options[feelList.selectedIndex].text;
+  }
+}
+
+
+function replaceAllUserFeelTextInput() {
+  let feelAnswers= document.getElementsByClassName("feel-answer")
+  for (feelAnswer of feelAnswers){
+    feelAnswer.innerHTML
+    = document.getElementById(
+      "feeling-input"
+    ).value;
+  }
+  
 }

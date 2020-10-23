@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myMindLab</title>
     <link href="style.css" rel="stylesheet" />
-    
+
 
 
 <body>
@@ -15,31 +15,33 @@
 
     <script src="app.js"> </script>
 
-<section> <h3>
-    
-  The YOU Experiment </h3>
-        </section>
- 
+    <section>
+        <h3>
+
+            The YOU Experiment </h3>
+    </section>
+
     <!-- How would I customise this so the user's name would appear instead of "You"? and How do I make the 'You' red? -->
     <!-- PAGE TITLE -->
 
 
     <h1> <u> WELCOME TO THE MIND LAB
-    </u> </h1>
+        </u> </h1>
     <p1>
-        <section class= "container"> 
+        <section class="container">
             <h4 class="intro">
-        This site is designed to show you a mirror of your mind. <p></p>
-        You will witness, in real time, the processes through
-        which you understand, experience, and interact with the world. <p>
+                This site is designed to show you a mirror of your mind. <p></p>
+                You will witness, in real time, the processes through
+                which you understand, experience, and interact with the world. <p>
 
-        </p>This method of active self inquiry can evolve
-        into a radically creative exercise in self determination - an unabashed 'F*ck You' to life on autopilot.
-       <p></p> Obstacles transform into doorways, and adversaries into teachers. <p></p> All it requires is <i>practice, curiosity, and a
-        willingness to tell yourself the truth.</i>
+                </p>This method of active self inquiry can evolve
+                into a radically creative exercise in self determination - an unabashed 'F*ck You' to life on autopilot.
+                <p></p> Obstacles transform into doorways, and adversaries into teachers. <p></p> All it requires is
+                <i>practice, curiosity, and a
+                    willingness to tell yourself the truth.</i>
     </p1>
-</h4>
-</section>
+    </h4>
+    </section>
     <!-- PAGE WELCOME -->
     <!-- ADD: Want to write short explanation about the concept/purpose of cognitive reframing. QUESTION: How do I increase the margins on both sides? How do I get rid of the space between WELCOME and QUOTE?-->
 
@@ -65,196 +67,211 @@ This will be the object of your inquiry. A circumstance can be anything that exi
     <h2>Step 1:</h2>
     <p>Choose a simple mental phrase you'd like to explore.
         Select one of the prompts, or enter one of your own.</p>
-       
-        <!-- THOUGHT CONTAINER CATEGORY -->
-    
- <fieldset>
-    <div> (Hint: 1. Avoid using commas or semi-colons. Simple, one line statements work best.) <p> (Hint 2. If your thought is in the form of a question, i.e: <em>'What if the market crashes?'</em>  Use the thought line to ANSWER your question: 'I know I'll be ok no matter what happens.' <italic>OR</italic> 'I'll die from starvation alone on the streets.' Whatever thought is <em>underneath</em> the question.) </p></div>
-   <legend>THOUGHTS</legend>
-            <p>
-                <!-- THOUGHT PROMPT DROP DOWN -->
-                <label>Select from the 'currently trending' thought list:</label>
-                <select id="thought-list" onchange="replaceUserThoughtWithDropdown()">
-                    <option value="default"></option>
-                    <option value="1"> 2020 sucks.</option>
-                    <option value="2"> We're entering a new Golden Age of creative innovation. </option>
-                    <option value="13"> Everybody lies.</option>
-                    <option value="13"> Most people are trustworthy.</option>
-                    <option value="8"> Ron is the most compelling Harry Potter character. </option>
-                    <option value="3"> That social activist stuff needs to chill until after CoVid.  </option>
-                    <option value="14"> Sometimes I start giggling uncontrollably for no reason.</option>
-                    <option value="4"> I don't have the bandwith for other people's problems. </option>
-                    <option value="9"> This month I incorporated 14 new productivity hacks into my planning process.</option>
-   vg               <option value="10"> It's always better to be the less invested partner in a romantic relationship.</option>
-                    <option value="11"> I'd rather have bamboo shoots shoved under my fingernails than cultivate empathy for Trump supporters.</option>
-                    <option value="5"> Woke culture is tired.</option>
-                    <option value="6"> I honor my values matters even when it's hard or inconvenient. </option>
-                    <option value="12"> Getting older is weird. </option>
-                    <option value="14"> Meeting new people terrifies me.</option>
-                    <option value="15"> Morning people are healthier. </option>
-                    <option value="Random"> I DON'T DO GENERIC THOUGHT PROMPTS. I'LL USE MY OWN LANGUAGE, THANKS. (Enter
-                        below.) </option>
-                </select>
+
+    <!-- THOUGHT CONTAINER CATEGORY -->
+
+    <fieldset>
+        <div> (Hint: 1. Avoid using commas or semi-colons. Simple, one line statements work best.) <p> (Hint 2. If your
+                thought is in the form of a question, i.e: <em>'What if the market crashes?'</em> Use the thought line
+                to ANSWER your question: 'I know I'll be ok no matter what happens.' <italic>OR</italic> 'I'll die from
+                starvation alone on the streets.' Whatever thought is <em>underneath</em> the question.) </p>
+        </div>
+        <legend>THOUGHTS</legend>
+        <p>
+            <!-- THOUGHT PROMPT DROP DOWN -->
+            <label>Select from the 'currently trending' thought list:</label>
+            <select id="thought-list" onchange="replaceUserThoughtWithDropdown()">
+                <option value="default"></option>
+                <option value="1"> 2020 sucks.</option>
+                <option value="2"> We're entering a new Golden Age of creative innovation. </option>
+                <option value="13"> Everybody lies.</option>
+                <option value="13"> Most people are trustworthy.</option>
+                <option value="8"> Ron is the most compelling Harry Potter character. </option>
+                <option value="3"> That social activist stuff needs to chill until after CoVid. </option>
+                <option value="14"> Sometimes I start giggling uncontrollably for no reason.</option>
+                <option value="4"> I don't have the bandwith for other people's problems. </option>
+                <option value="9"> This month I incorporated 14 new productivity hacks into my planning process.
+                </option>
+                vg <option value="10"> It's always better to be the less invested partner in a romantic relationship.
+                </option>
+                <option value="11"> I'd rather have bamboo shoots shoved under my fingernails than cultivate empathy for
+                    Trump supporters.</option>
+                <option value="5"> Woke culture is tired.</option>
+                <option value="6"> I honor my values matters even when it's hard or inconvenient. </option>
+                <option value="12"> Getting older is weird. </option>
+                <option value="14"> Meeting new people terrifies me.</option>
+                <option value="15"> Morning people are healthier. </option>
+                <option value="Random"> I DON'T DO GENERIC THOUGHT PROMPTS. I'LL USE MY OWN LANGUAGE, THANKS. (Enter
+                    below.) </option>
+            </select>
+        <section class="project__container">
+
+            <div class="project__entry">
+                <p>Customize my Cerebral Chit-chat:</p>
+                <input id="thought-input"> </input>
+
+                <button onclick="onThoughtButtonClicked()" id="thought-button">
+                    Submit!</button>
+
+                <!-- FILL IN PHRASE FIELD -->
                 <section class="project__container">
-                
-                    <div class="project__entry">
-                   <p>Customize my Cerebral Chit-chat:</p>
-                    <input id="thought-input"> </input>
 
-                    <button onclick="onThoughtButtonClicked()" id="thought-button">
-                        Submit!</button>
-                
-                    <!-- FILL IN PHRASE FIELD -->
-                    <section class="project__container">
-
-                        <!-- SUBMIT MY THOUGHT SELECTION.
+                    <!-- SUBMIT MY THOUGHT SELECTION.
                     FIX: FORMATTING: ALIGNMENT, FONT 
                     PROBLEM: IF USER WRITES IN A SELECTION HOW WILL PROGRAM KNOW NOT TO INPUT WHAT APPEARS ON THE THOUGHT LIST?   -->
-                        <!-- </select> -->
-                    </div>
-                </section>
-            </p>
-        </fieldset>
+                    <!-- </select> -->
+            </div>
+        </section>
+        </p>
+    </fieldset>
 
-        <!-- STEP 2: FEELINGS
+    <!-- STEP 2: FEELINGS
     FIX: RANDOM OPTION NEEDS TO HIDE UNTIL USER SELECTS INSPIRATION -->
-        <h2>Step 2:</h2>
-            <p>Repeat your chosen phrase in your mind. What <b><i>one</i></b> emotion dominates as you think that thought?</p>   <p>....and remember, there are no right or wrong answers - just information, empty of meaning until you add meaning to it.</p>
-              <fieldset>
+    <h2>Step 2:</h2>
+    <p>Repeat your chosen phrase in your mind. What <b><i>one</i></b> emotion dominates as you think that thought?</p>
+    <p>....and remember, there are no right or wrong answers - just information, empty of meaning until you add meaning
+        to it.</p>
+    <fieldset>
 
-              <div> (Hint: if two or more feelings come to mind, it's not a problem. Pick the one you find most
-                    interesting
-                    for now. You can always come back and explore the other emotion(s) later.)
-                    </p>
+        <div> (Hint: if two or more feelings come to mind, it's not a problem. Pick the one you find most
+            interesting
+            for now. You can always come back and explore the other emotion(s) later.)
+            </p>
 
-                 
-                </div>
 
-                <!-- FEELINGS PROMPT PHRASES
+        </div>
+
+        <!-- FEELINGS PROMPT PHRASES
             FIX: CHANGE FONT. P2 Popup? -->
-                <!-- how can I make my examples pop up? or drop down? i dont want the user to have to see them if they don't want to -->
-             
-                    
-                   
-                        <label>Select from frequently flagged feeling list:</label>
-                        <legend>FEELINGS</legend>
-                        <!-- <p></p> -->
-                        <!-- MATCH FORMATTING WITH THOUGHT FIELD -->
-          <select id="feelingsList" onchange="onFeelingsDropdownChanged()" >
-         <option value="default"></option>
-         <option value="1">elevated</option>
-         <option value="2">self-righteous</option>
-          <option value="3">confused</option>
-         <option value="4">ashamed</option>
-          <option value="5">defensive</option>
-           <option value="6">flat</option>
-         <option value="7">playful</option>
-         <option value="8">combative</option>
-         <option value="9">grumpy</option>
-         <option value="10">cheerful</option>
-         <option value="11">resigned</option>
-         <option value="12">annoyed</option>
-         <option value="13">numb</option>
-         <option value="Random"> I NEED EMOTIONAL INSPIRATION! (Click below for random suggestions.)
-         </option>
-         </select>
+        <!-- how can I make my examples pop up? or drop down? i dont want the user to have to see them if they don't want to -->
 
-                        <!-- FEELING WRITE-IN 
+
+
+        <label>Select from frequently flagged feeling list:</label>
+        <legend>FEELINGS</legend>
+        <!-- <p></p> -->
+        <!-- MATCH FORMATTING WITH THOUGHT FIELD -->
+        <select id="feelingsList" onchange="onFeelingsDropdownChanged()">
+            <option value="default"></option>
+            <option value="1">elevated</option>
+            <option value="2">self-righteous</option>
+            <option value="3">confused</option>
+            <option value="4">ashamed</option>
+            <option value="5">defensive</option>
+            <option value="6">flat</option>
+            <option value="7">playful</option>
+            <option value="8">combative</option>
+            <option value="9">grumpy</option>
+            <option value="10">cheerful</option>
+            <option value="11">resigned</option>
+            <option value="12">annoyed</option>
+            <option value="13">numb</option>
+            <option value="Random"> I NEED EMOTIONAL INSPIRATION! (Click below for random suggestions.)
+            </option>
+        </select>
+
+        <!-- FEELING WRITE-IN 
                         FIX: LOTS OF ISSUES -->
-                        <!-- <section class="project__container"> -->
-                            <!-- <h4 class="project__sub-heading"> MY FEELING  -->
-                         <!-- <p></p> -->
-                          <!-- <h2 class="project__sub-heading"> </h2>
+        <!-- <section class="project__container"> -->
+        <!-- <h4 class="project__sub-heading"> MY FEELING  -->
+        <!-- <p></p> -->
+        <!-- <h2 class="project__sub-heading"> </h2>
                      </div> -->
-<section class="project__container">
-    <div id= "random-container" hidden> 
-    <button id="random-button">Random</button>
- <input id="random-feeling-input" value="script"></input>
-     </div>
-     <div class="project__entry">  
-    <p>It's my feeling, I want to write <i>my</i> word <i>my</i> way:</p>
-    
-     <input id="feeling-input" ></input>
- <button onclick = "replaceUserFeelText()" id="feelings-button">
-    Submit!</button>
- 
-     </section>
+        <section class="project__container">
+            <div id="random-container" hidden>
+                <button id="random-button">Random</button>
+                <input id="random-feeling-input" value="script"></input>
+            </div>
+            <div class="project__entry">
+                <p>It's my feeling, I want to write <i>my</i> word <i>my</i> way:</p>
 
-                                <!-- RANDOM FEELING GENERATOR -->
-                                <!-- source https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_input_value -->
+                <input id="feeling-input"></input>
+                <button onclick="replaceAllUserFeelTextInput()" id="feelings-button">
+                    Submit!</button>
 
-     </p>
-     </fieldset>
-                <!-- source https://www.dummies.com/web-design-development/site-development/how-to-create-a-drop-down-list-in-an-html5-form/ -->
+        </section>
+
+        <!-- RANDOM FEELING GENERATOR -->
+        <!-- source https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_input_value -->
+
+        </p>
+    </fieldset>
+    <!-- source https://www.dummies.com/web-design-development/site-development/how-to-create-a-drop-down-list-in-an-html5-form/ -->
 
 
-        <!--STEP 3: ACTIONS -->
+    <!--STEP 3: ACTIONS -->
     <!-- ACTION PROMPT AND EXAMPLES: USE YES CLICK EXAMPLE AND ON  -->
 
-        <h2>Step 3:</h2> <p>
+    <h2>Step 3:</h2>
+    <p>
 
-     Pause and reflect. When you feel<script>
-        function replaceUserFeelText() {
-           document.getElementById("userFeel").innerHTML = document.getElementById(
-              "feeling-input")
-                .value;
-               }
+        Pause and reflect. When you feel
+        <script>
+    
         </script>
-               <p id="userFeel"></p>how do you <i>behave
-     </i>?* </p>
-                <p>
-                    Examples:
-                    Make time for an extra workout. Snap at my partner. Spend too much shopping online. Zone out
-                    scrolling on
-                    social media. Forget to reply to Dad's email again. Snack on crap
-                    before bed. Meditate an extra 20 minutes.</p> 
-                
- <fieldset>
-        <div> 
-          (Hint: *List as many relevant behaviors that you can think of that connect with the feeling state you identified above. You may also find it helpful to include <b><i>inactions</i></b> like procrastination, rumination, or avoidance of commitments.) </p></div>
- <legend>ACTIONS</legend>
-  <p></p>
-     <div class="project__entry">
- <p>MY ACTIONS<p>
-     <section class="project__container">
-         <!-- <h2 class="project__sub-heading"> </h2>
-         <div class="project__entry"> -->
- <script>
-function replaceUserActionText() {
-document.getElementById("userActions").innerHTML = document.getElementById(
- "action-input")
-     .value;
-     }
-  </script>
-     <input id="action-input"></input>
-      <button onclick="replaceUserActionText()" id="action-button"> Submit!</button>
-         </div>
-            <!-- </section> -->
-            <!-- </div> -->
-     </fieldset>
-                
-                <!-- RESULTS  -->
-                <!-- <section class="project__container"> -->
+    <p class="feel-answer"></p>how do you <i>behave
+    </i>?* </p>
+    <p>
+        Examples:
+        Make time for an extra workout. Snap at my partner. Spend too much shopping online. Zone out
+        scrolling on
+        social media. Forget to reply to Dad's email again. Snack on crap
+        before bed. Meditate an extra 20 minutes.</p>
 
-     <h2 class="project__sub-heading">
-                    Step 4:
-     </h2>
-   What effect do you create by engaging in the behaviors you've identified?<p>Examples: Have more energy. Get into another argument with my partner. Default on my credit card payment. My daughter thinks I don't care enough to give her my full attention. My dad stops reaching out. I'm up all night with heartburn. I keep cool during a hardball negotiation. 
-       
-   </p>
-     <fieldset>
-   <legend>RESULTS</legend>
-                
-    <div class="project__entry"><p>
-     <p> MY RESULTS </p>
-     <input id="results-input"></input>
-     <button onclick="onResultButtonClicked()" id="results-button"> Submit!</button>
-     <!-- <button id="RESULTS">Submit</button> -->
-    </div>
+    <fieldset>
+        <div>
+            (Hint: *List as many relevant behaviors that you can think of that connect with the feeling state you
+            identified above. You may also find it helpful to include <b><i>inactions</i></b> like procrastination,
+            rumination, or avoidance of commitments.) </p>
+        </div>
+        <legend>ACTIONS</legend>
+        <p></p>
+        <div class="project__entry">
+            <p>MY ACTIONS
+            <p>
+            <section class="project__container">
+                <!-- <h2 class="project__sub-heading"> </h2>
+         <div class="project__entry"> -->
+                <script>
+                    function replaceUserActionText() {
+                        document.getElementById("userActions").innerHTML = document.getElementById(
+                            "action-input")
+                            .value;
+                    }
+                </script>
+                <input id="action-input"></input>
+                <button onclick="replaceUserActionText()" id="action-button"> Submit!</button>
+        </div>
+        <!-- </section> -->
+        <!-- </div> -->
     </fieldset>
-                <!-- </section>
+
+    <!-- RESULTS  -->
+    <!-- <section class="project__container"> -->
+
+    <h2 class="project__sub-heading">
+        Step 4:
+    </h2>
+    What effect do you create by engaging in the behaviors you've identified?<p>Examples: Have more energy. Get into
+        another argument with my partner. Default on my credit card payment. My daughter thinks I don't care enough to
+        give her my full attention. My dad stops reaching out. I'm up all night with heartburn. I keep cool during a
+        hardball negotiation.
+
+    </p>
+    <fieldset>
+        <legend>RESULTS</legend>
+
+        <div class="project__entry">
+            <p>
+            <p> MY RESULTS </p>
+            <input id="results-input"></input>
+            <button onclick="onResultButtonClicked()" id="results-button"> Submit!</button>
+            <!-- <button id="RESULTS">Submit</button> -->
+        </div>
+    </fieldset>
+    <!-- </section>
                 </div> -->
-                <!-- 
+    <!-- 
             <section class="project__container">
     <h2 class="project__sub-heading"> MY ACTIONS </h2>
      <div class="project__entry">
@@ -263,81 +280,78 @@ document.getElementById("userActions").innerHTML = document.getElementById(
      <button id="action-button">Submit!</button>
     </div> -->
 
-                <!-- SUMMARY COMMENTS: ***HIDE ENTIRE FIELD UNTIL USER CLICKS FINAL 'SUBMIT"-->
+    <!-- SUMMARY COMMENTS: ***HIDE ENTIRE FIELD UNTIL USER CLICKS FINAL 'SUBMIT"-->
 
-              <!-- <section id="the-big-picture" class="container">  -->
-                    <section hidden id="the-big-picture" class="container"> 
-                
-                    <!-- hidden to get entire container to hide -->
-                   <h2> REVIEW</h2>
-                    <div></div>
-                    <fieldset>
-                        <p></p>
-                        <legend>THE BIG PICTURE </legend>
-                        <class="project__sub-heading"> So, to recap: When you THINK
-    <!-- THINK -->
-  
-         <p id="userThought"></p>
-        
+    <!-- <section id="the-big-picture" class="container">  -->
+    <section hidden id="the-big-picture" class="container">
 
-        and you FEEL
+        <!-- hidden to get entire container to hide -->
+        <h2> REVIEW</h2>
+        <div></div>
+        <fieldset>
+            <p></p>
+            <legend>THE BIG PICTURE </legend>
+            <class="project__sub-heading"> So, to recap: When you THINK
+                <!-- THINK -->
 
-     <!-- FEEL -->
-  <script>
-   function replaceUserFeelText() {
-      document.getElementById("userFeel").innerHTML = document.getElementById(
-         "feeling-input")
-           .value;
-          }
-   </script>
-          <p id="userFeel"></p>
-      
+                <p id="userThought"></p>
 
-     <!-- ACTIONS -->
-        you
-        
-   <script>
-     function replaceUserActText() {
-      document.getElementById("userActions").innerHTML = document.getElementById(
-        "actions-input")
-          .value;
-         }
-   </script>
-         <p id="userActions"></p>
-    
-    <!-- RESULTS -->
-    with an outcome of
-    
-     <p id="userResults"></p>
-         
-          <p></p>
-       
-<div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               </div>
-    Take a moment and think about the CONSEQUENCE(S) of that chain when compounded over time......1 month, 6 months, 1 year, 5 years, 20 years, etc. 
-            <p></p>What
-         <italic> LONG TERM OUTCOME</italic>
-             do you see becoming more (or less) likely for yourself if you continue to rehearse and reinforce these beliefs and behavior
-         patterns? <p> Use your imagination here. Make your projections vivid in your mind's eye. Don't be afraid to make bold projections!</p
-     <!-- (Example: Need to write something simple correlating w previous hints.)
-                 -->
+
+                and you FEEL
+
+                <!-- FEEL -->
+               
+                <p id="userFeel" class = 'feel-answer'></p>
+
+
+                <!-- ACTIONS -->
+                you
+
+                <script>
+                    function replaceUserActText() {
+                        document.getElementById("userActions").innerHTML = document.getElementById(
+                            "actions-input")
+                            .value;
+                    }
+                </script>
+                <p id="userActions"></p>
+
+                <!-- RESULTS -->
+                with an outcome of
+
+                <p id="userResults"></p>
+
+                <p></p>
+
+                <div> </div>
+                Take a moment and think about the CONSEQUENCE(S) of that chain when compounded over time......1 month, 6
+                months, 1 year, 5 years, 20 years, etc.
+                <p></p>What
+                <italic> LONG TERM OUTCOME</italic>
+                do you see becoming more (or less) likely for yourself if you continue to rehearse and reinforce these
+                beliefs and behavior
+                patterns? <p> Use your imagination here. Make your projections vivid in your mind's eye. Don't be afraid
+                    to make bold projections!</p <!-- (Example: Need to write something simple correlating w previous
+                    hints.) -->
                 <!-- </section> -->
-                  <!-- </div>
+                <!-- </div>
              </h4> -->
-            <!-- NOTE: USE TEMPLATE FORM FROM YES/NO BUTTON <p id="noClick"></p> TO DO TEXT INSERTION ON SUMMARY COMMENTS -->
+                <!-- NOTE: USE TEMPLATE FORM FROM YES/NO BUTTON <p id="noClick"></p> TO DO TEXT INSERTION ON SUMMARY COMMENTS -->
 
-        <!-- <section class="project__container"> -->
- <!--    
+                <!-- <section class="project__container"> -->
+                <!--    
 <div class="project__entry">  -->
                 <!--   
   <input id="results-input"></input> -->
                 <!-- <button id="results-button">Submit!</button> -->
                 <!-- </div>      <section/> -->
- <section class="container">
-  <h2 class="project__sub-heading">
-   Do you like the characteristics you're cultivating and/or the types of experience you're encouraging with the decisions you've identified in this thought experiment?
- </div>
- </h2>
- </section>
+                <section class="container">
+                    <h2 class="project__sub-heading">
+                        Do you like the characteristics you're cultivating and/or the types of experience you're
+                        encouraging with the decisions you've identified in this thought experiment?
+                        </div>
+                    </h2>
+                </section>
                 <!-- LATER: Why or why not? what t/f/a/r might you want to refine? what do you want to experience differently on your next exploration? -->
 
                 <!-- <button id="yesButton">YES</button>
@@ -349,57 +363,56 @@ Great! You just discovered valuable information about what does not work for you
 
                 <!-- HIDDEN ID -->
 
- 
- <section class id=review>
- <div>
-     <button onclick="yesFunction()">YES</button>
-      <button onclick="noFunction()">NO</button>
-    <p id="yesClick"></p>
- <p id="noClick"></p>
- </div>
-</section>
+
+                <section class id=review>
+                    <div>
+                        <button onclick="yesFunction()">YES</button>
+                        <button onclick="noFunction()">NO</button>
+                        <p id="yesClick"></p>
+                        <p id="noClick"></p>
+                    </div>
+                </section>
                 <!-- CLOSING TEXT -->
                 <!-- <p>
     Remember, lead with fascination. Leave space to astonish yourself. When you pay attention to your experience, every moment is an opportunity to meet yourself with fresh eyes. Whether what you discover is mysterious, hilarious, shocking, magnificent, or ineffable is entirely up to you. </p> -->
                 <!-- </div> -->
-            </section>      
+    </section>
 
-<div>
- <h5>***Challenge*** After you've mastered observing and describing your innerOS without judgement, it's
-  time to get creative: Choose a specific emotion, action, or outcome that you'd like to experience,
-and work backwards to figure out how you will need to think in order to acheive that particular
- result.</h5>
- </div>
-<div>
-     <button onclick="BackToTop()"> 
-        I want to keep experimenting. Take me back to the Mindlab.
-     </button>
-    </div
-               
-      <section>
-       <h3>Whether you experience reality as shocking, inspid, hilarious, magnificent, or mundane is entirely
-     up to you.
-      PRACTICE witnessing the way your mind works. PAY ATTENTION to the quality of your noticing. ASK
-     yourself: WHY do you focus on one thing as opposed to another? BE CURIOUS about the words you choose
-     to DESCRIBE what you see. PLAY with your language as if it's paint on an infinite canvas.</h3>
-            </section>
+    <div>
+        <h5>***Challenge*** After you've mastered observing and describing your innerOS without judgement, it's
+            time to get creative: Choose a specific emotion, action, or outcome that you'd like to experience,
+            and work backwards to figure out how you will need to think in order to acheive that particular
+            result.</h5>
+    </div>
+    <div>
+        <button onclick="BackToTop()">
+            I want to keep experimenting. Take me back to the Mindlab.
+        </button>
+    </div <section>
+    <h3>Whether you experience reality as shocking, inspid, hilarious, magnificent, or mundane is entirely
+        up to you.
+        PRACTICE witnessing the way your mind works. PAY ATTENTION to the quality of your noticing. ASK
+        yourself: WHY do you focus on one thing as opposed to another? BE CURIOUS about the words you choose
+        to DESCRIBE what you see. PLAY with your language as if it's paint on an infinite canvas.</h3>
+    </section>
 
-            <section class="highlight selection">
-                <p id="canvas-container">
-                    <section
-                    <p id="sliders-container">
-                    </p>
+    <section class="highlight selection">
+        <p id="canvas-container">
+        <section <p id="sliders-container">
+            </p>
 
-                </p>
-            </section>
-         
-                 <!-- TRY TO SINGLE OUT HINTS -->
-                <!-- source: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_hidden_get -->
+            </p>
+        </section>
 
-                <p class="one"></p>
-                <p class="two"></p>
-                <p class="three"></p>
-                <p class="welcome"> <blockquote> </blockquote></p>
+        <!-- TRY TO SINGLE OUT HINTS -->
+        <!-- source: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_hidden_get -->
+
+        <p class="one"></p>
+        <p class="two"></p>
+        <p class="three"></p>
+        <p class="welcome">
+        <blockquote> </blockquote>
+        </p>
 
 </body>
 
