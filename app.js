@@ -73,7 +73,7 @@ function yesFunction() {
 
 function noFunction() {
   document.getElementById("yesClick").innerHTML =
-    "Great! You just discovered valuable information about what does <em>not</em> work for you. Keep experimenting with different thought/feeling/action combinations until you figure out the recipe that works for you.";
+    "Great! You just discovered valuable information about what does <em>not</em> work for you. Keep experimenting with different thought/feeling/action combinations. There is no right or wrong way to do this!";
   // if (document.getElementById("noClick").innerHTML.length === 0) {
   //     document.getElementById("noClick").innerHTML =
   //         "Great! You just discovered valuable information about what does not work for you. Try playing again, perhaps exploring a different thought/feeling/action combination. Before you know it you'll see for yourself the incredible results conscious thinking can create!";
