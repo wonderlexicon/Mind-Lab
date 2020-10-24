@@ -133,6 +133,7 @@ function allSectionsFilled() {
   );
 }
 
+
 // THOUGHT
 function replaceUserThoughtText() {
   document.getElementById("userThought").innerHTML = document.getElementById(
@@ -165,6 +166,7 @@ function writeToThoughtsDb() {
   //TO BE CONTINUED WRITING TO NEDB//
 }
 //
+
 function replaceUserThoughtWithDropdown() {
   console.log("dropdown");
   let thoughtList = document.getElementById("thought-list");
@@ -172,8 +174,36 @@ function replaceUserThoughtWithDropdown() {
     thoughtList.options[thoughtList.selectedIndex].text;
 }
 
+function onThoughtDropdownChanged() {
+  console.log('changed');
+  let thoughtList = document.getElementById("thought-list");
+  
+  if (thoughtList.value !== "enterMyOwn") {
+    replaceUserThoughtWithDropdown();
+    hideThoughtInputBox();
+  }
+
+  else{
+    showThoughtInputBox();
+  }
+}
+
+function hideThoughtInputBox() {
+  
+  console.log('hidden');
+  console.log(document.getElementById("thought-entry-container"))
+  document.getElementById("thought-entry-container").hidden = true;
+
+}
+
+function showThoughtInputBox() {
+  console.log("show");
+  document.getElementById("thought-entry-container").removeAttribute("hidden");
+}
+
+
 function replaceAllUserThoughtTextDropdown() {
-  let thoughtList = document.getElementById("thoughtList");
+  let thoughtList = document.getElementById("thought-list");
   let thoughtAnswers= document.getElementsByClassName("thought-answer")
   for (thoughtAnswer of thoughtAnswers){
     thoughtAnswer.innerHTML =

@@ -77,36 +77,36 @@ This will be the object of your inquiry. A circumstance can be anything that exi
                 starvation alone on the streets.' Whatever thought is <em>underneath</em> the question.) </p>
         </div>
         <legend>THOUGHTS</legend>
-        <p>
+     
             <!-- THOUGHT PROMPT DROP DOWN -->
             <label>Select from the 'currently trending' thought list:</label>
-            <select id="thought-list" onchange="replaceUserThoughtWithDropdown()">
+            <select id="thought-list" onchange="onThoughtDropdownChanged()">
                 <option value="default"></option>
                 <option value="1"> 2020 sucks.</option>
                 <option value="2"> We're entering a new Golden Age of creative innovation. </option>
-                <option value="13"> Everybody lies.</option>
-                <option value="13"> Most people are trustworthy.</option>
-                <option value="8"> Ron is the most compelling Harry Potter character. </option>
-                <option value="3"> That social activist stuff needs to chill until after CoVid. </option>
-                <option value="14"> Sometimes I start giggling uncontrollably for no reason.</option>
-                <option value="4"> I don't have the bandwith for other people's problems. </option>
+                <option value="3"> Everybody lies.</option>
+                <option value="4"> Most people are trustworthy.</option>
+                <option value="5"> Ron is the most compelling Harry Potter character. </option>
+                <option value="6"> That social activist stuff needs to chill until after CoVid. </option>
+                <option value="7"> Sometimes I start giggling uncontrollably for no reason.</option>
+                <option value="8"> I don't have the bandwith for other people's problems. </option>
                 <option value="9"> This month I incorporated 14 new productivity hacks into my planning process.
                 </option>
                 vg <option value="10"> It's always better to be the less invested partner in a romantic relationship.
                 </option>
                 <option value="11"> I'd rather have bamboo shoots shoved under my fingernails than cultivate empathy for
                     Trump supporters.</option>
-                <option value="5"> Woke culture is tired.</option>
-                <option value="6"> I honor my values matters even when it's hard or inconvenient. </option>
-                <option value="12"> Getting older is weird. </option>
-                <option value="14"> Meeting new people terrifies me.</option>
-                <option value="15"> Morning people are healthier. </option>
-                <option value="Random"> I DON'T DO GENERIC THOUGHT PROMPTS. I'LL USE MY OWN LANGUAGE, THANKS. (Enter
+                <option value="12"> Woke culture is tired.</option>
+                <option value="13"> I honor my values matters even when it's hard or inconvenient. </option>
+                <option value="14"> Getting older is weird. </option>
+                <option value="15"> Meeting new people terrifies me.</option>
+                <option value="16"> Morning people are healthier. </option>
+                <option value="enterMyOwn"> I DON'T DO GENERIC THOUGHT PROMPTS. I'LL USE MY OWN LANGUAGE, THANKS. (Enter
                     below.) </option>
             </select>
         <section class="project__container">
 
-            <div class="project__entry">
+            <div id = "thought-entry-container">
                 <p>Customize my Cerebral Chit-chat:</p>
                 <input id="thought-input"> </input>
 
@@ -114,7 +114,6 @@ This will be the object of your inquiry. A circumstance can be anything that exi
                     Submit!</button>
 
                 <!-- FILL IN PHRASE FIELD -->
-                <section class="project__container">
 
                     <!-- SUBMIT MY THOUGHT SELECTION.
                     FIX: FORMATTING: ALIGNMENT, FONT 
@@ -282,8 +281,8 @@ This will be the object of your inquiry. A circumstance can be anything that exi
 
     <!-- SUMMARY COMMENTS: ***HIDE ENTIRE FIELD UNTIL USER CLICKS FINAL 'SUBMIT"-->
 
-    <!-- <section id="the-big-picture" class="container">  -->
-    <section hidden id="the-big-picture" class="container">
+    <section id="the-big-picture" class="container"> 
+    <!-- <section hidden id="the-big-picture" class="container"> -->
 
         <!-- hidden to get entire container to hide -->
         <h2> REVIEW</h2>
