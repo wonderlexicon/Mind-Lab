@@ -61,7 +61,7 @@ function BackToTop() {
 
 function yesFunction() {
   document.getElementById("yesClick").innerHTML =
-    "Great! You have just reinforced a positive pattern and strenthened your understanding of a causal connection that you can apply to other situations in your life! If you're ready for a bigger challenge, explore an unpleasant thought or go deeper into your exploration of a random emotion.";
+    "Great! You just reinforced a positive pattern and strenthened awareness of causal connections that can carry over to similar situations in your life. Keep experimenting! When you're ready, try out the challenge!";
   // if (document.getElementById("yesClick").innerHTML.length === 0) {
   //     document.getElementById("yesClick").innerHTML =
   //         "Great! You have just reinforced a positive pattern and strenthened your understanding of a causal connection that you can apply to other situations in your life! If you're ready for a bigger challenge, explore an unpleasant thought or go deeper into your exploration of a random emotion.";
@@ -73,7 +73,7 @@ function yesFunction() {
 
 function noFunction() {
   document.getElementById("yesClick").innerHTML =
-    "Great! You just discovered valuable information about what does not work for you. Try playing again, perhaps exploring a different thought/feeling/action combination. Before you know it you'll see for yourself the incredible results conscious thinking can create!";
+    "Great! You just discovered valuable information about what does <em>not</em> work for you. Keep experimenting with different thought/feeling/action combinations until you figure out the recipe that works for you.";
   // if (document.getElementById("noClick").innerHTML.length === 0) {
   //     document.getElementById("noClick").innerHTML =
   //         "Great! You just discovered valuable information about what does not work for you. Try playing again, perhaps exploring a different thought/feeling/action combination. Before you know it you'll see for yourself the incredible results conscious thinking can create!";

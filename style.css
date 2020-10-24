@@ -158,6 +158,12 @@ p#userThought
   font-size: 30px;
 }
 
+.feel-answer 
+{
+  color: rgb(235, 29, 29);
+  font-weight: extrabold;
+  font-size: 30px;
+}
 p#userFeel
 {
   color: rgb(235, 29, 29);
@@ -190,18 +196,17 @@ p#userResults
   color: rgb(228, 31, 31);
 }
 
-/* body { */
-  .box {
-    margin-top: -40px;
-    margin-right: 4em;
-    margin-bottom: 40px;
-    margin-left: 4em;
-  }
-  /* padding: 30px;
-  animation: mymove 120s infinite;
+body {
+ 
+  
+  
+
+
+  padding: 30px; 
+  animation: mymove 160s infinite; 
   font-family: fantasy;
   align-items: center-position;
-  } */
+  }
 
  /* display: inline-block; */
  
@@ -216,7 +221,7 @@ p#userResults
     }
 
     to {
-      background-color:rgba(21, 240, 192, 0.849);
+      background-color:rgba(56, 187, 159, 0.849);
     } 
   }
    
