@@ -106,7 +106,7 @@ This will be the object of your inquiry. A circumstance can be anything that exi
             </select>
         <section class="project__container">
 
-            <div id = "thought-entry-container">
+            <div id = "thought-entry-container" hidden>
                 <p>Customize my Cerebral Chit-chat:</p>
                 <input id="thought-input"> </input>
 
@@ -165,7 +165,10 @@ This will be the object of your inquiry. A circumstance can be anything that exi
             <option value="11">resigned</option>
             <option value="12">annoyed</option>
             <option value="13">numb</option>
-            <option value="Random"> I NEED EMOTIONAL INSPIRATION! (Click below for random suggestions.)
+            <option value="Random"> I NEED EMOTIONAL INSPIRATION! (Select for random suggestions.)
+            </option>
+            <option value="enterMyOwn"> I DON'T DO GENERIC FEELING PROMPTS. I'LL USE MY OWN LANGUAGE, THANKS. (Select to enter
+                below.)
             </option>
         </select>
 
@@ -181,13 +184,13 @@ This will be the object of your inquiry. A circumstance can be anything that exi
                 <button id="random-button">Random</button>
                 <input id="random-feeling-input" value="script"></input>
             </div>
-            <div class="project__entry">
+            <div id = "feel-entry-container" hidden>
                 <p>It's my feeling, I want to write <i>my</i> word <i>my</i> way:</p>
 
                 <input id="feeling-input"></input>
                 <button onclick="replaceAllUserFeelTextInput()" id="feelings-button">
                     Submit!</button>
-
+            </div>
         </section>
 
         <!-- RANDOM FEELING GENERATOR -->

@@ -174,20 +174,6 @@ function replaceUserThoughtWithDropdown() {
     thoughtList.options[thoughtList.selectedIndex].text;
 }
 
-function onThoughtDropdownChanged() {
-  console.log('changed');
-  let thoughtList = document.getElementById("thought-list");
-  
-  if (thoughtList.value !== "enterMyOwn") {
-    replaceUserThoughtWithDropdown();
-    hideThoughtInputBox();
-  }
-
-  else{
-    showThoughtInputBox();
-  }
-}
-
 function hideThoughtInputBox() {
   
   console.log('hidden');
@@ -202,6 +188,36 @@ function showThoughtInputBox() {
 }
 
 
+
+function onThoughtDropdownChanged() {
+  console.log('changed');
+  let thoughtList = document.getElementById("thought-list");
+  
+  if (thoughtList.value !== "enterMyOwn") {
+    replaceUserThoughtWithDropdown();
+    hideThoughtInputBox();
+  }
+
+  else{
+    showThoughtInputBox();
+  }
+}
+
+// FEEL
+
+function onFeelingsDropdownChanged() {
+  let feelList = document.getElementById("feelingsList");
+  // if (feelList.value == "Random"){
+  showRandomContainerIfDropdownSelected();
+  showFeelInputContainerIfDropdownSelected();
+  // }
+  if (feelList.value !== "Random" && feelList.value !== "enterMyOwn") {
+    replaceAllUserFeelTextDropdown();
+  }
+}
+
+
+
 function replaceAllUserThoughtTextDropdown() {
   let thoughtList = document.getElementById("thought-list");
   let thoughtAnswers= document.getElementsByClassName("thought-answer")
@@ -212,8 +228,16 @@ function replaceAllUserThoughtTextDropdown() {
 }
 
 
+function showFeelInputContainerIfDropdownSelected() {
+  console.log("showFeelInputFunction");
+  if (document.getElementById("feelingsList").value === "enterMyOwn") {
+    document.getElementById("feel-entry-container").removeAttribute("hidden");
+  } else {
+    document.getElementById("feel-entry-container").hidden = true;
+  }
+}
 
-// FEEL
+
 function showRandomContainerIfDropdownSelected() {
   console.log("showRandomFunction");
   if (document.getElementById("feelingsList").value === "Random") {
@@ -223,15 +247,6 @@ function showRandomContainerIfDropdownSelected() {
   }
 }
 
-function onFeelingsDropdownChanged() {
-  let feelList = document.getElementById("feelingsList");
-  // if (feelList.value == "Random"){
-  showRandomContainerIfDropdownSelected();
-  // }
-  if (feelList.value !== "Random") {
-    replaceAllUserFeelTextDropdown();
-  }
-}
 
 
 
