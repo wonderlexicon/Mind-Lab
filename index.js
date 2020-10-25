@@ -3,6 +3,9 @@ let app = express();
 let path = require ("path");
 let nedb = require ("nedb");
 
+let bodyParser = require ("body-parser");
+app.use(bodyParser.json())
+
 let thoughtsDb =  new nedb("thoughts.db");
 thoughtsDb.loadDatabase();
 
@@ -18,9 +21,9 @@ app.post('/postThoughts', (req,res)=> {
     console.log('posting');
     let newThought = {
         date: Date(), 
-        thought: req.thought
+        thought: req.body.thought
     }
-    db.insert(newThought, (err, newDocs)=>{
+    thoughtsDb.insert(newThought, (err, newDocs)=>{
         if (err){
             res.json({task: "failed"});
 
